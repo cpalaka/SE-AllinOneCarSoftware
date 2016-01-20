@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainScreen">
+   <top>
+      <HBox alignment="CENTER" prefHeight="29.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Time/Date" />
+            <Label text="Current Speed" />
+            <ProgressBar prefHeight="18.0" prefWidth="75.0" progress="1.0" />
+            <Slider id="volumeControl" prefHeight="14.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <TabPane prefHeight="371.0" prefWidth="196.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="phonetab" text="Phone  ">
+               <content>
+                  <AnchorPane prefHeight="342.0" prefWidth="124.0">
+                     <children>
+                        <TextArea fx:id="numberBar" layoutX="16.0" layoutY="75.0" prefHeight="6.0" prefWidth="168.0" />
+                        <GridPane layoutX="32.0" layoutY="125.0" prefHeight="153.0" prefWidth="133.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="pb1" mnemonicParsing="false" text="1" />
+                              <Button fx:id="pb2" mnemonicParsing="false" text="2" GridPane.columnIndex="1" />
+                              <Button fx:id="pb3" mnemonicParsing="false" text="3" GridPane.columnIndex="2" />
+                              <Button fx:id="pb4" mnemonicParsing="false" text="4" GridPane.rowIndex="1" />
+                              <Button fx:id="pb5" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="pb6" mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button fx:id="pb7" mnemonicParsing="false" text="7" GridPane.rowIndex="2" />
+                              <Button fx:id="pb8" mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button fx:id="pb9" mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button fx:id="pb0" mnemonicParsing="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button fx:id="pbback" mnemonicParsing="false" text="&lt;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Button fx:id="pbclear" mnemonicParsing="false" text="Clear" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <ComboBox fx:id="contactsbox" layoutX="10.0" layoutY="3.0" prefHeight="25.0" prefWidth="178.0" promptText="Contacts" />
+                        <Button layoutX="10.0" layoutY="30.0" mnemonicParsing="false" text="Add Contact" />
+                        <Button fx:id="deletecontact" layoutX="93.0" layoutY="30.0" mnemonicParsing="false" text="Delete Contact" />
+                        <Button fx:id="callbutton" layoutX="80.0" layoutY="285.0" mnemonicParsing="false" text="Call" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab fx:id="radiotab" text="Radio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="radioFrequency" layoutX="56.0" layoutY="69.0" prefHeight="64.0" prefWidth="81.0" text="Label" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="143.0" layoutY="172.0" mnemonicParsing="false" text="+" />
+                        <Button layoutX="21.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
+                        <RadioButton layoutX="26.0" layoutY="14.0" mnemonicParsing="false" text="AM" />
+                        <RadioButton layoutX="125.0" layoutY="14.0" mnemonicParsing="false" text="FM" />
+                        <Separator layoutX="94.0" layoutY="15.0" orientation="VERTICAL" prefHeight="32.0" prefWidth="3.0" />
+                        <Separator layoutX="-2.0" layoutY="47.0" prefWidth="200.0" />
+                        <Label fx:id="stationName" layoutX="76.0" layoutY="130.0" text="Label" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView layoutX="14.0" layoutY="220.0" prefHeight="70.0" prefWidth="166.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </left>
+   <center>
+  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="413.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <TreeView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.exitScreenController">
+  <tabs>
+    <Tab text="Drive Information">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="quitbutton" layoutX="638.0" layoutY="17.0" mnemonicParsing="false" onAction="#onQuit" text="Quit" />
+                  <TreeView fx:id="treeView" layoutX="27.0" layoutY="24.0" prefHeight="300.0" prefWidth="560.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Previous Drives">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TreeView fx:id="prevTreeView" layoutX="27.0" layoutY="24.0" prefHeight="300.0" prefWidth="560.0" />
+                  <Button layoutX="638.0" layoutY="17.0" mnemonicParsing="false" onAction="#onQuit" text="Quit" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

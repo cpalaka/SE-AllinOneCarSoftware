@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root prefHeight="343.0" prefWidth="198.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <RadioButton fx:id="FMradioButton" layoutX="108.0" layoutY="14.0" mnemonicParsing="false" onAction="#onFMPress" text="FM" />
+        <Separator layoutX="-2.0" layoutY="47.0" prefWidth="200.0" />
+      <AnchorPane layoutX="34.0" layoutY="68.0" prefHeight="131.0" prefWidth="133.0">
+         <children>
+              <Label fx:id="radioFrequency" alignment="CENTER" layoutX="3.0" prefHeight="64.0" prefWidth="126.0" text="Label" textAlignment="CENTER">
+                  <font>
+                      <Font name="Arial" size="30.0" />
+                  </font>
+              </Label>
+              <Label fx:id="stationName" alignment="CENTER" layoutX="-4.0" layoutY="83.0" prefHeight="25.0" prefWidth="140.0" text="Label" textAlignment="JUSTIFY">
+                  <font>
+                      <Font size="16.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+        <ListView fx:id="radioList" layoutX="14.0" layoutY="220.0" onMouseClicked="#onRadioListClicked" prefHeight="70.0" prefWidth="166.0" />
+        <RadioButton fx:id="AMradioButton" layoutX="43.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAMPress" text="AM" textAlignment="CENTER" />
+      <Button fx:id="offRadioButton" layoutX="73.0" layoutY="304.0" mnemonicParsing="false" onAction="#onOffRadioPress" text="Turn Off" />
+    </children>
+</fx:root>

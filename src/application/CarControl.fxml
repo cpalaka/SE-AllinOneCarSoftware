@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- TODO Add Nodes -->
+    <Pane prefHeight="359.0" prefWidth="103.0" BorderPane.alignment="CENTER">
+        <children>
+            <Circle fx:id="startCircle" fill="DODGERBLUE" layoutX="54.0" layoutY="50.0" onMouseReleased="#onStartButtonClicked" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="startLabel" layoutX="38.0" layoutY="42.0" onMouseReleased="#onStartButtonClicked" text="START" />
+            <Circle fx:id="endCircle" fill="#858c86" layoutX="55.0" layoutY="109.0" onMouseReleased="#onEndButtonClicked" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="endLabel" layoutX="43.0" layoutY="101.0" onMouseReleased="#onEndButtonClicked" text="END" />
+            <Polygon fx:id="accelerateButton" fill="#858c86" layoutX="55.0" layoutY="172.0" onMousePressed="#accelerate" scaleX="0.5" scaleY="0.4" stroke="BLACK" strokeType="INSIDE">
+                <points>
+                    <Double fx:value="-50.0" />
+                    <Double fx:value="40.0" />
+                    <Double fx:value="50.0" />
+                    <Double fx:value="40.0" />
+                    <Double fx:value="0.0" />
+                    <Double fx:value="-60.0" />
+                </points>
+            </Polygon>
+            <Polygon fx:id="deccelerateButton" fill="#858c86" layoutX="55.0" layoutY="220.0" onMousePressed="#deccelerate" rotate="180.0" scaleX="0.5" scaleY="0.4" stroke="BLACK" strokeType="INSIDE">
+                <points>
+                    <Double fx:value="-50.0" />
+                    <Double fx:value="40.0" />
+                    <Double fx:value="50.0" />
+                    <Double fx:value="40.0" />
+                    <Double fx:value="0.0" />
+                    <Double fx:value="-60.0" />
+                </points>
+            </Polygon>
+            <Rectangle fx:id="brakeButton" arcHeight="5.0" arcWidth="5.0" fill="#858c86" height="200.0" layoutX="-46.0" layoutY="160.0" onMouseClicked="#brake" scaleX="0.4" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Label fx:id="brakeLabel" layoutX="38.0" layoutY="252.0" onMouseClicked="#brake" text="BRAKE" />
+         <Button fx:id="logOutButton" layoutX="24.0" layoutY="319.0" mnemonicParsing="false" onAction="#onLoggingOut" text="Log Out" />
+            <!--<Line endX="100.0" layoutY="180.0" rotate="90.0" scaleX="1.8" startX="-100.0" />-->
+        </children>
+    </Pane>
+</fx:root>

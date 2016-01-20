@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginScreen">
+   <children>
+      <TextField fx:id="userTextField" layoutX="220.0" layoutY="102.0" onKeyPressed="#checkIfEmpty" onKeyReleased="#isUserNameValid" onMouseExited="#isUserNameValid" promptText="username" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="226.0">
+         <tooltip>
+            <Tooltip text="username must not exceed 15 characters" />
+         </tooltip></TextField>
+      <PasswordField fx:id="passwordField" layoutX="220.0" layoutY="169.0" onKeyPressed="#onKeyPressed" onKeyTyped="#isUserNameValid" onMouseClicked="#isUserNameValid" promptText="password" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="226.0" />
+      <Button fx:id="loginButton" layoutX="270.0" layoutY="231.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Log In" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.0" />
+      <Circle fx:id="verificationCircle" fill="#2ce845" layoutX="450.0" layoutY="115.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Label fx:id="outputText" alignment="CENTER" layoutY="79.0" prefHeight="17.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
